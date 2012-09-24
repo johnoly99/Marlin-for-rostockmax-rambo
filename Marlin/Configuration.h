@@ -8,8 +8,8 @@
 //User specified version info of THIS file to display in [Pronterface, etc] terminal window during startup.
 //Implementation of an idea by Prof Braino to inform user that any changes made
 //to THIS file by the user have been successfully uploaded into firmware.
-#define STRING_VERSION_CONFIG_H "2012-09-01" //Personal revision number for changes to THIS file.
-#define STRING_CONFIG_H_AUTHOR "jcrocholl" //Who made the changes.
+#define STRING_VERSION_CONFIG_H "2012-09-21" //Personal revision number for changes to THIS file.
+#define STRING_CONFIG_H_AUTHOR "johnoly99 and johnnyR from UltiMachine" //Who made the changes.
 
 // This determines the communication speed of the printer
 #define BAUDRATE 250000
