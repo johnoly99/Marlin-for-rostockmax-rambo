@@ -91,9 +91,9 @@
 #endif
 
 //homing hits the endstop, then retracts by this distance, before it tries to slowly bump again:
-#define X_HOME_RETRACT_MM 10
-#define Y_HOME_RETRACT_MM 10
-#define Z_HOME_RETRACT_MM 10
+#define X_HOME_RETRACT_MM 5
+#define Y_HOME_RETRACT_MM 5
+#define Z_HOME_RETRACT_MM 5
 #define QUICK_HOME  // move all carriages up together until the first endstop is hit.
 
 #define AXIS_RELATIVE_MODES {false, false, false, false}

@@ -163,7 +163,10 @@
 const bool X_ENDSTOPS_INVERTING = false; // set to true to invert the logic of the endstops.
 const bool Y_ENDSTOPS_INVERTING = false; // set to true to invert the logic of the endstops.
 const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of the endstops.
+
 //#define DISABLE_MAX_ENDSTOPS
+#define DISABLE_MIN_ENDSTOPS
+
 
 // For Inverting Stepper Enable Pins (Active Low) use 0, Non Inverting (Active High) use 1
 #define X_ENABLE_ON 0
@@ -210,7 +213,7 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 // For Rostock this means top and center of the cartesian print volume.
 #define X_HOME_POS 0
 #define Y_HOME_POS 0
-#define Z_HOME_POS 353.5 // Distance between nozzle and print surface after homing.
+#define Z_HOME_POS 353.0 // Distance between nozzle and print surface after homing.
 
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
@@ -220,13 +223,13 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {53.333, 53.333, 53.333, 292.0}  // default steps per unit for rostockmax
 #define DEFAULT_MAX_FEEDRATE          {300, 300, 300, 300}  // (mm/sec)
-#define DEFAULT_MAX_ACCELERATION      {9000, 9000, 9000, 9000}  // X, Y, Z, E maximum start speed for accelerated moves.
+#define DEFAULT_MAX_ACCELERATION      {3000, 30000, 3000, 9000}  // X, Y, Z, E maximum start speed for accelerated moves.
 
-#define DEFAULT_ACCELERATION          3000   // X, Y, Z and E max acceleration in mm/s^2 for printing moves
+#define DEFAULT_ACCELERATION          1000   // X, Y, Z and E max acceleration in mm/s^2 for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  3000   // X, Y, Z and E max acceleration in mm/s^2 for r retracts
 
 // 
-#define DEFAULT_XYJERK                20.0   // (mm/sec)
+#define DEFAULT_XYJERK                15.0   // (mm/sec)
 #define DEFAULT_ZJERK                 20.0   // (mm/sec)
 #define DEFAULT_EJERK                 20.0   // (mm/sec)
 
