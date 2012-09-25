@@ -1,7 +1,7 @@
 WARNING: 
 --------
 THIS IS RELEASE CANDIDATE 2 FOR MARLIN 1.0.0
-
+by seemecnc
 
 ***This firmware is modified for use with Rostock MAX and similar***
 
