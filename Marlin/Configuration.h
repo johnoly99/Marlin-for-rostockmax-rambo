@@ -62,10 +62,10 @@
 // 52 is 200k thermistor - ATC Semitec 204GT-2 (1k pullup)
 // 55 is 100k thermistor - ATC Semitec 104GT-2 (Used in ParCan) (1k pullup)
 
-#define TEMP_SENSOR_0 1
+#define TEMP_SENSOR_0 5
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
-#define TEMP_SENSOR_BED 1
+#define TEMP_SENSOR_BED 5
 
 // Actual temperature must be close to target for this long before M109 returns success
 #define TEMP_RESIDENCY_TIME 5	// (seconds)
@@ -75,18 +75,18 @@
 // The minimal temperature defines the temperature below which the heater will not be enabled It is used
 // to check that the wiring to the thermistor is not broken. 
 // Otherwise this would lead to the heater being powered on all the time.
-#define HEATER_0_MINTEMP 10
-#define HEATER_1_MINTEMP 10
-#define HEATER_2_MINTEMP 10
-#define BED_MINTEMP 10
+#define HEATER_0_MINTEMP 3
+#define HEATER_1_MINTEMP 3
+#define HEATER_2_MINTEMP 3
+#define BED_MINTEMP 3
 
 // When temperature exceeds max temp, your heater will be switched off.
 // This feature exists to protect your hotend from overheating accidentally, but *NOT* from thermistor short/failure!
 // You should use MINTEMP for thermistor short/failure protection.
-#define HEATER_0_MAXTEMP 250
-#define HEATER_1_MAXTEMP 250
-#define HEATER_2_MAXTEMP 250
-#define BED_MAXTEMP 130
+#define HEATER_0_MAXTEMP 275
+#define HEATER_1_MAXTEMP 275
+#define HEATER_2_MAXTEMP 275
+#define BED_MAXTEMP 140
 
 // If your bed has low resistance e.g. .6 ohm and throws the fuse you can duty cycle it to reduce the
 // average current. The value should be an integer and the heat bed will be turned on for 1 interval of
@@ -105,10 +105,17 @@
   #define PID_dT ((16.0 * 8.0)/(F_CPU / 64.0 / 256.0)) //sampling period of the
 
 // If you are using a preconfigured hotend then you can use one of the value sets by uncommenting it
+
+// SeeMeCNC "Steve's Hot-End"
+    #define  DEFAULT_Kp 46.78
+    #define  DEFAULT_Ki 2.68 
+    #define  DEFAULT_Kd 204 
+
+
 // Ultimaker
-    #define  DEFAULT_Kp 22.2
-    #define  DEFAULT_Ki 1.08  
-    #define  DEFAULT_Kd 114  
+   // #define  DEFAULT_Kp 22.2
+   // #define  DEFAULT_Ki 1.08  
+    //#define  DEFAULT_Kd 114  
 
 // Makergear
 //    #define  DEFAULT_Kp 7.0
@@ -213,23 +220,23 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 // For Rostock this means top and center of the cartesian print volume.
 #define X_HOME_POS 0
 #define Y_HOME_POS 0
-#define Z_HOME_POS 353.0 // Distance between nozzle and print surface after homing.
+#define Z_HOME_POS 345.0 // Distance between nozzle and print surface after homing.
 
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
-#define HOMING_FEEDRATE {1000, 1000, 1000, 0}  // set the homing speeds (mm/min)
+#define HOMING_FEEDRATE {500, 500, 500, 0}  // set the homing speeds (mm/min)
 
 // default settings 
 
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {53.333, 53.333, 53.333, 292.0}  // default steps per unit for rostockmax
-#define DEFAULT_MAX_FEEDRATE          {300, 300, 300, 300}  // (mm/sec)
-#define DEFAULT_MAX_ACCELERATION      {3000, 30000, 3000, 9000}  // X, Y, Z, E maximum start speed for accelerated moves.
+#define DEFAULT_MAX_FEEDRATE          {200, 200, 200, 60}  // (mm/sec)
+#define DEFAULT_MAX_ACCELERATION      {2000, 2000, 2000, 12000}  // X, Y, Z, E maximum start speed for accelerated moves.
 
-#define DEFAULT_ACCELERATION          1000   // X, Y, Z and E max acceleration in mm/s^2 for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  3000   // X, Y, Z and E max acceleration in mm/s^2 for r retracts
+#define DEFAULT_ACCELERATION          800   // X, Y, Z and E max acceleration in mm/s^2 for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  4500   // X, Y, Z and E max acceleration in mm/s^2 for r retracts
 
 // 
-#define DEFAULT_XYJERK                15.0   // (mm/sec)
+#define DEFAULT_XYJERK                20.0   // (mm/sec)
 #define DEFAULT_ZJERK                 20.0   // (mm/sec)
 #define DEFAULT_EJERK                 20.0   // (mm/sec)
 
@@ -274,8 +281,8 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
   #define PLA_PREHEAT_HPB_TEMP 70
   #define PLA_PREHEAT_FAN_SPEED 255		// Insert Value between 0 and 255
 
-  #define ABS_PREHEAT_HOTEND_TEMP 240
-  #define ABS_PREHEAT_HPB_TEMP 100
+  #define ABS_PREHEAT_HOTEND_TEMP 230
+  #define ABS_PREHEAT_HPB_TEMP 40
   #define ABS_PREHEAT_FAN_SPEED 255		// Insert Value between 0 and 255
 
 #else //no panel but just lcd 

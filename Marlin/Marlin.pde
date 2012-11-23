@@ -1,6 +1,8 @@
 /* -*- c++ -*- */
 
 /*
+     johnoly99's RAMBo and Delta
+    
     Reprap firmware based on Sprinter and grbl.
  Copyright (C) 2011 Camiel Gubbels / Erik van der Zalm
  
@@ -758,7 +760,7 @@ void process_commands()
         destination[X_AXIS] = 1.5 * X_MAX_LENGTH * X_HOME_DIR;
         destination[Y_AXIS] = 1.5 * Y_MAX_LENGTH * Y_HOME_DIR;
         destination[Z_AXIS] = 1.5 * Z_MAX_LENGTH * Z_HOME_DIR;
-        feedrate = 1.732 * homing_feedrate[X_AXIS];
+        feedrate = 6.0 * homing_feedrate[X_AXIS];
         plan_buffer_line(destination[X_AXIS], destination[Y_AXIS], destination[Z_AXIS], destination[E_AXIS], feedrate/60, active_extruder);
         st_synchronize();
 
