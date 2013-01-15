@@ -787,7 +787,7 @@ int read_max6675()
   WRITE(MAX6675_SS, 0);
   
   // ensure 100ns delay - a bit extra is fine
-  asm("nop");
+  asm("nop");                                     //THANKS TO Stanos on IRC for finding this bug
   asm("nop");
   
   // read MSB
