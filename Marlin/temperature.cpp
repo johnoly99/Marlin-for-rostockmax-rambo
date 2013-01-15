@@ -787,7 +787,8 @@ int read_max6675()
   WRITE(MAX6675_SS, 0);
   
   // ensure 100ns delay - a bit extra is fine
-  delay(1);
+  asm("nop");
+  asm("nop");
   
   // read MSB
   SPDR = 0;

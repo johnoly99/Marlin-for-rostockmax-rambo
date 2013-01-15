@@ -2,6 +2,10 @@
 
 /*
      johnoly99's RAMBo and Delta for Rostock MAX kits
+     
+#############################  SHOP FLASHED FIRMWARE, SHIPS W/ROSTOCK MAX KITS #############################     
+     
+     
     
     Reprap firmware based on Sprinter and grbl.
  Copyright (C) 2011 Camiel Gubbels / Erik van der Zalm
