@@ -50,9 +50,9 @@
 //  extruder run-out prevention. 
 //if the machine is idle, and the temperature over MINTEMP, every couple of SECONDS some filament is extruded
 //#define EXTRUDER_RUNOUT_PREVENT  
-#define EXTRUDER_RUNOUT_MINTEMP 190  
-#define EXTRUDER_RUNOUT_SECONDS 30.
-#define EXTRUDER_RUNOUT_ESTEPS 14. //mm filament
+#define EXTRUDER_RUNOUT_MINTEMP 180
+#define EXTRUDER_RUNOUT_SECONDS 20.
+#define EXTRUDER_RUNOUT_ESTEPS 20. //mm filament
 #define EXTRUDER_RUNOUT_SPEED 1500.  //extrusion speed
 #define EXTRUDER_RUNOUT_EXTRUDE 100
 
@@ -106,8 +106,8 @@
 #define INVERT_Z_STEP_PIN false
 #define INVERT_E_STEP_PIN false
 
-//default stepper release if idle
-#define DEFAULT_STEPPER_DEACTIVE_TIME 600
+//default stepper release if idle for longer than below time (in seconds)
+#define DEFAULT_STEPPER_DEACTIVE_TIME 600     // 10 minutes   
 
 #define DEFAULT_MINIMUMFEEDRATE       0.0     // minimum feedrate
 #define DEFAULT_MINTRAVELFEEDRATE     0.0
@@ -147,8 +147,8 @@
 //===========================================================================
 
 
-#define SD_FINISHED_STEPPERRELEASE true  //if sd support and the file is finished: disable steppers?
-#define SD_FINISHED_RELEASECOMMAND "M84 X Y Z E" // no z because of layer shift.
+#define SD_FINISHED_STEPPERRELEASE false  //if sd support and the file is finished: disable steppers?
+#define SD_FINISHED_RELEASECOMMAND "M84" // no z because of layer shift.
 
 // The hardware watchdog should halt the Microcontroller, in case the firmware gets stuck somewhere. However:
 // the Watchdog is not working well, so please only enable this for testing

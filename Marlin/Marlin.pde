@@ -3,7 +3,7 @@
 /*
      johnoly99's RAMBo and Delta for Rostock MAX kits
      
-#############################  SHOP FLASHED FIRMWARE, SHIPS W/ROSTOCK MAX KITS #############################     
+#############################  SHOP FLASHED FIRMWARE, SHIPS W/ROSTOCK MAX KITS for RAMBo 1.1a which uses 1/16th stepping drivers #############################     
      
      
     

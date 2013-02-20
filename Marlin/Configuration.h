@@ -8,8 +8,8 @@
 //User specified version info of THIS file to display in [Pronterface, etc] terminal window during startup.
 //Implementation of an idea by Prof Braino to inform user that any changes made
 //to THIS file by the user have been successfully uploaded into firmware.
-#define STRING_VERSION_CONFIG_H "2012-09-21" //Personal revision number for changes to THIS file.
-#define STRING_CONFIG_H_AUTHOR "johnoly99 and johnnyR from UltiMachine" //Who made the changes.
+#define STRING_VERSION_CONFIG_H "02-08-2013" //Personal revision number for changes to THIS file.
+#define STRING_CONFIG_H_AUTHOR "SeeMeCNC FOR 1.1 and later RAMBo w/ 16 stepping" //Who made the changes.
 
 // This determines the communication speed of the printer
 #define BAUDRATE 250000
@@ -68,25 +68,25 @@
 #define TEMP_SENSOR_BED 5
 
 // Actual temperature must be close to target for this long before M109 returns success
-#define TEMP_RESIDENCY_TIME 5	// (seconds)
+#define TEMP_RESIDENCY_TIME 3	// (seconds)
 #define TEMP_HYSTERESIS 3       // (degC) range of +/- temperatures considered "close" to the target one
 #define TEMP_WINDOW     1       // (degC) Window around target to start the recidency timer x degC early.
 
 // The minimal temperature defines the temperature below which the heater will not be enabled It is used
 // to check that the wiring to the thermistor is not broken. 
 // Otherwise this would lead to the heater being powered on all the time.
-#define HEATER_0_MINTEMP 3
-#define HEATER_1_MINTEMP 3
-#define HEATER_2_MINTEMP 3
-#define BED_MINTEMP 3
+#define HEATER_0_MINTEMP 15
+#define HEATER_1_MINTEMP 15
+#define HEATER_2_MINTEMP 15
+#define BED_MINTEMP 15
 
 // When temperature exceeds max temp, your heater will be switched off.
 // This feature exists to protect your hotend from overheating accidentally, but *NOT* from thermistor short/failure!
 // You should use MINTEMP for thermistor short/failure protection.
-#define HEATER_0_MAXTEMP 275
-#define HEATER_1_MAXTEMP 275
-#define HEATER_2_MAXTEMP 275
-#define BED_MAXTEMP 140
+#define HEATER_0_MAXTEMP 265
+#define HEATER_1_MAXTEMP 265
+#define HEATER_2_MAXTEMP 265
+#define BED_MAXTEMP 120
 
 // If your bed has low resistance e.g. .6 ohm and throws the fuse you can duty cycle it to reduce the
 // average current. The value should be an integer and the heat bed will be turned on for 1 interval of
@@ -228,8 +228,8 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 
 // default settings 
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {53.333, 53.333, 53.333, 292.0}  // default steps per unit for rostockmax
-#define DEFAULT_MAX_FEEDRATE          {200, 200, 200, 60}  // (mm/sec)
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {106.666, 106.666, 106.666, 578.0}  // default steps per unit for rostockmax
+#define DEFAULT_MAX_FEEDRATE          {300, 300, 300, 60}  // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {2000, 2000, 2000, 12000}  // X, Y, Z, E maximum start speed for accelerated moves.
 
 #define DEFAULT_ACCELERATION          800   // X, Y, Z and E max acceleration in mm/s^2 for printing moves
