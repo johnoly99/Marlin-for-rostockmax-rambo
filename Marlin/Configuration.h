@@ -228,12 +228,14 @@ const bool Z_ENDSTOPS_INVERTING = false; // set to true to invert the logic of t
 
 // default settings 
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {106.666, 106.666, 106.666, 578.0}  // default steps per unit for rostockmax
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   {53.333, 53.333, 53.333, 292.0}  // default steps per unit for rostockmax with 15 tooth pulleys and 1/8 stepping ~ RAMBo 1.0 and older
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {106.666, 106.666, 106.666, 584.0}  // default steps per unit for rostockmax with 15 tooth pulleys and 1/16 stepping ~ RAMBo 1.1 and later
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   {80.000, 80.000, 80.000, 584.0}  // default steps per unit for rostockmax with 20 tooth pulleys and 1/16 stepping ~ RAAMBo 1.1 and later
 #define DEFAULT_MAX_FEEDRATE          {300, 300, 300, 60}  // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {2000, 2000, 2000, 12000}  // X, Y, Z, E maximum start speed for accelerated moves.
 
-#define DEFAULT_ACCELERATION          800   // X, Y, Z and E max acceleration in mm/s^2 for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  4500   // X, Y, Z and E max acceleration in mm/s^2 for r retracts
+#define DEFAULT_ACCELERATION          1500   // X, Y, Z and E max acceleration in mm/s^2 for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  1500   // X, Y, Z and E max acceleration in mm/s^2 for r retracts
 
 // 
 #define DEFAULT_XYJERK                20.0   // (mm/sec)
